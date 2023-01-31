@@ -5,6 +5,7 @@ import ExpenseList from "./components/ExpenseList"
 import Budget from "./components/Budget"
 import Remaining from "./components/Remaining"
 import ExpenseTotal from "./components/ExpenseTotal"
+import DropdownMenu from "./components/Dropdown"
 
 // Add code to import the components
 import { AppProvider } from './context/AppContext';
@@ -23,9 +24,9 @@ const App = () => {
                         <div className="col-sm">
                         <ExpenseTotal/>
                         </div>
-                        
-                        
-                       
+                        <div className="col-sm">
+                        <DropdownMenu/>
+                        </div>
                         </div>
                 <h1>Allocation </h1> 
                 <ExpenseList/>

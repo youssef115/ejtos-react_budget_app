@@ -4,6 +4,27 @@ import React, { createContext, useReducer } from 'react';
 export const AppReducer = (state, action) => {
     let budget = 0;
     switch (action.type) {
+        case 'DECREASE_EXPENSE':
+            let total_budget1 = 0;
+            action.type = "DONE";
+            if(total_budget1 <= state.budget) {
+                total_budget1 = 0;
+                state.expenses.map((currentExp)=> {
+                    if(currentExp.name === action.payload.name) {
+                        currentExp.cost -= action.payload.cost;
+                    }
+                    return currentExp
+                });
+                return {
+                    ...state,
+                };
+            } else {
+                alert("Cannot increase the allocation! Out of funds");
+                return {
+                    ...state
+                }
+            }
+
         case 'ADD_EXPENSE':
             let total_budget = 0;
             total_budget = state.expenses.reduce(
@@ -69,7 +90,19 @@ export const AppReducer = (state, action) => {
             state.currency = action.payload;
             return {
                 ...state
-            }
+            };
+        case "CHANGE_BUDGET":
+             action.type="DONE";
+             state.budget=action.payload;
+             return{
+                 ...state
+             };
+        case "CHANGE_CURRENCY":
+            action.type="DONE";
+            state.currency=action.payload;
+            return{
+                ...state
+            };        
 
         default:
             return state;

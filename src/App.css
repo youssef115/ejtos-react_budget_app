@@ -36,3 +36,67 @@
     transform: rotate(360deg);
   }
 }
+.dropdown .button {
+    background-color:  rgb(74, 211, 126);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  #select1{
+    border-radius: 5px;
+    color:#FFF;
+    padding:10px 0px;
+    width: 200px;
+    background-color: rgb(52, 197, 120);
+  }
+  .menu select {
+    border-radius: 15px;
+    
+    padding: 0;
+    width: 200px;
+    color: rgb(52, 197, 120);
+  }
+  
+  .menu option  {
+    display: block;
+    background-color: rgb(52, 197, 120);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .menu option:hover {
+    background-color: rgb(231, 248, 239);
+    color: white;
+  }
+  .currency{
+      background-color: #282c34;
+      padding-right:60px;
+      position: flex;
+      margin-left: 120px;
+  }
+
+  .increase-btn{
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color:rgb(36, 231, 127);
+  }
+  .increase-btn span{
+      color:white;
+      
+      font-size: 18px;
+  }
+  .decrease-btn{
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color:rgb(218, 23, 23);
+  }
+  .decrease-btn span{
+    color:white;
+    
+    font-size: 18px;
+}
